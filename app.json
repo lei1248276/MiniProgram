@@ -1,6 +1,39 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about"
-  ]
+    "pages/about/about",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F5FFFA",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "天堂",
+    "backgroundColor": "#DCDCDC",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "天府",
+        "iconPath": "assets/tabBar/paradise.png",
+        "selectedIconPath": "assets/tabBar/paradise_act.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "地狱",
+        "iconPath": "assets/tabBar/inferno.png",
+        "selectedIconPath": "assets/tabBar/inferno.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "伊甸园",
+        "iconPath": "assets/tabBar/park.png",
+        "selectedIconPath": "assets/tabBar/park_act.png"
+      }
+    ],
+    "selectedColor": "#A52A2A"
+  },
+  "sitemapLocation": "sitemap72.json"
 }

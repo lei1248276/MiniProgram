@@ -1,1 +1,4 @@
-/* pages/home.wxss */
+/* pages/home/home.wxss */
+view{
+  font-size: 22px;
+}
