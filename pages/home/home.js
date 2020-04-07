@@ -5,15 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    number: 10,
+    titles: ['衣服','鞋子','裤子'],
+    currentIndex: 0,
   },
+  input(res) {
+    console.log(res);
+  },
+  numToFix(num) {
+    return num.toFixed(2);
+  },
+  handleTouch1(e) {
+    console.log(e);
+  },
+  handleClick(e) {
+    console.log(e);
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      currentIndex: index,
+    })
+  },
+  handleBtnClick(e) {
+    console.log('......')
+    console.log(e)
+  },
+  // handleTouch2(e) {
+  //   console.log(e);
+  // },
   
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
 
   },
 

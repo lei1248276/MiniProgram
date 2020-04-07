@@ -1,0 +1,37 @@
+module.exports.message = 'hello world',
+module.exports.num = 123.21,
+module.exports.num2 = 12,
+module.exports.sum = function(num1,num2) {
+      return num1 + num2;
+    };
+
+// module.exports = {
+//   message: message,
+//   num : num,
+//   num2 : num2,
+//   sum : sum,
+// };
+
+// 价格格式化
+module.exports.numToFix = function (num,float) {
+  return parseFloat(num).toFixed(float);
+}
+
+// 时间格式化
+module.exports.formatTime = function (time) {
+  time = time ? getDate(time) : getDate();
+  // console.log(time)
+  // console.log(getDate())
+  var year = time.getFullYear(),
+      month = time.getMonth() + 1,
+      day = time.getDate(),
+      hour = time.getHours(),
+      minute = time.getMinutes(),
+      second = time.getSeconds();
+  return [year,month,day].map(formatNumber).join('-') + ' ' + [hour,minute,second].map(formatNumber).join(':');
+};
+
+var formatNumber = function(num) {
+  num = num.toString();
+  return num[1] ? num : '0' + num;
+}

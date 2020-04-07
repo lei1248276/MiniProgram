@@ -1,1 +1,33 @@
 <!--pages/home/home.wxml-->
+<text selectable>hello world</text>
+<text hidden="{{true}}">hello Jaye</text>
+<view hidden="{{false}}">hi</view> 
+<view wx:if="{{true}}">hello</view> 
+<input bindinput="input"></input>
+
+<!-- 小程序中的mustache语法无法使用函数 -->
+<view>{{parserFloat('522.1231fsasd')}}</view>
+
+<!-- 使用wxs -->
+<wxs src="../home/wxs.wxs" module="tools"/>
+<view>{{tools.num}}</view>
+<view>{{tools.sum(number,23)}}</view>
+<!-- 垃圾东西 -->
+<view>{{tools.numToFix('1231.12',1)}}</view>
+<view>{{tools.formatTime()}}</view>
+
+<view bindtouchstart="handleTouch1" id="box1">哈哈哈哈哈哈哈
+  <view bindtouchstart="handleTouch2" id="box2">呵呵呵呵呵呵</view>
+</view>
+
+<view class="title">
+      <block wx:for="{{titles}}" wx:key="*this">
+        <view class="item {{currentIndex === index ? 'active' : ''}}"
+              bindtap="handleClick"
+              data-index="{{index}}">
+          <text class="titleItem">{{item}}</text>
+        </view>
+      </block>
+</view>
+<my-cpn title="哈哈哈" bind:bClick="handleBtnClick"></my-cpn>
+<my-cpn title="呵呵呵"></my-cpn>
