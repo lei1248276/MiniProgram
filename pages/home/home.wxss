@@ -12,7 +12,7 @@ input{
 }
 #box2{
   width: 200rpx;
-  height: 200rpx;
+  height: 200rpx; 
   background-color: purple;
 }
 .title{
@@ -23,7 +23,7 @@ input{
 }
 .item{
   flex: 1;
-}
+ }
 .active{
   color: pink;
 }
