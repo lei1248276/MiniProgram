@@ -7,6 +7,24 @@ Page({
   data: {
     
   },
+
+  handleShowToast() {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 2000,
+      mask: true,
+    })
+  },
+  handleShowModal() {
+    wx.showModal({
+      title: 'title',
+      content: 'hello world',
+      confirmColor: 'red',
+      cancelText: '退出',
+    })
+  },
+  
   
 
   /**
@@ -63,6 +81,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '去他妈的**',
+      imageUrl: '/assets/tabBar/inferno.png'
+    }
   }
 })

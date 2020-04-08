@@ -8,7 +8,28 @@ App({
       complete: (res) => {
         console.log(res)
       },
-    })
+    });
+    
+    // 登入操作
+    // wx.login({
+    //   success(res) {
+    //     // 获取code
+    //     const code = res.code;
+
+    //     // 将code发送给自己的服务器
+    //     wx.request({
+    //       url: "http://106.54.54.237:3000/api/h8/login",
+    //       method: 'post',
+    //       data: {
+    //         code
+    //       },
+    //       success(res) {
+    //         console.log(res)
+    //       }
+    //     })
+    //   }
+    // })
+
   },
 
   /**

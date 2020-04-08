@@ -1,1 +1,10 @@
 <!--pages/home/home.wxml-->
+<!-- 1.toast 弹窗 -->
+<button bind:tap="handleShowToast">点我</button>
+
+<!-- 2.modal 弹窗 -->
+<button bind:tap="handleShowModal">点我</button>
+
+<!-- 3.分享按钮 -->
+<button open-type="share">分享</button>
+
