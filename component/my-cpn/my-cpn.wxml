@@ -1,0 +1,4 @@
+<!--component/my-cpn/my-cpn.wxml-->
+<view>Hello world</view>
+<text>{{title}}</text>
+<button bind:tap="btnClick">点我啊</button>
